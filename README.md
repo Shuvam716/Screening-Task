@@ -1,4 +1,4 @@
-# Project Name
+# Web Dev Screening Task
 
 This project features a modern, responsive React/Next.js frontend that displays a catalog of courses with real-time searching and filtering, alongside a robust Python Flask backend API that validates incoming Indian mobile numbers and messages. The frontend and backend are seamlessly connected to provide an interactive "Send a Message" feature with live, inline response feedback.
 
@@ -16,10 +16,9 @@ This project features a modern, responsive React/Next.js frontend that displays 
 ### Backend (Flask)
 ```bash
 cd backend
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
+where python
+C:\Python313\python.exe -m pip install flask flask-cors      # Replace C:\Python313\python.exe with the output of the where python
+C:\Python313\python.exe app.py
 # Runs on http://localhost:5000
 ```
 
@@ -39,18 +38,6 @@ Body: `{ "phone_number": "9876543210", "message": "Hello" }`
 - **Success (200)**:  `{ "success": true, "message": "Message sent successfully", "phone_number": "9876543210" }`
 - **Error   (400)**:  `{ "success": false, "error": "<reason>" }`
 - **Missing (422)**:  `{ "success": false, "error": "Missing required fields" }`
-
-## Screenshots
-*(Add screenshots of the course page and API response box here)*
-
----
-
-```bash
-# First-time setup
-git init
-git add .
-git commit -m "feat: initial submission — Next.js + Flask full-stack project"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-git push -u origin main
+```
+The messages are stored in the backend/message.json
 ```
